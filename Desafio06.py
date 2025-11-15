@@ -1,19 +1,18 @@
 from datetime import date
-nascimento= int(input('Digite aqui o ano de nascimento do atleta:'))
-nome= str(input('Digite aqui seu nome:')).strip()
+ano_nascimento= int(input('Digite aqui o seu ano de nascimento:'))
 ano_atual= date.today().year
-idade_atleta= ano_atual-nascimento
-if idade_atleta<=9:
-    print(f'Você tem {idade_atleta} anos, e está na categoria Mirin!')
-elif idade_atleta<=14:
-    print(f'Você tem {idade_atleta} anos, e está na categoria Infantil!')
-elif idade_atleta <=19:
-    print(f'Você tem {idade_atleta} anos, e está na categoria Júnior!')
-elif  idade_atleta<=20:
-    print(f'Você tem {idade_atleta} anos, e está na categoria Sênior!')
+idade= ano_atual-ano_nascimento
+if idade <=9:
+    print(f'Referente a sua idade de {idade} anos, sua categoria é MIRIN!')
+elif idade <=14:
+    print(f'Referente a sua idade de {idade} anos, sua categoria é INFANTIL!')
+elif idade <=19:
+    print(f'Referente a sua idade de {idade} anos, sua categoria é JÚNIOR!')
+elif idade <=20:
+    print(f'Referente a sua idade de {idade} anos, sua categoria é SÊNIOR!')
 else:
-    print(f'Você tem {idade_atleta} anos, e está na categoria Master!')
-print(f'Tenha uma boa noite {nome}!')
+    print(f'Referente a sua idade de {idade} anos, sua categoria é MASTER!')
+print('Fim do programa')
 
 '''
 A confederação nacional de natação precisa de um programa que leia o ano de nascimento de um atleta e mostre sua

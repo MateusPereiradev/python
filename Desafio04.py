@@ -1,16 +1,15 @@
-nascimento= int(input('Digite aqui o seu ano de nascimento:'))
+ano_nascimento= int(input('Digite aqui o seu ano de nascimento:'))
 nome= str(input('Digite aqui seu nome:')).strip()
-idade=2025-nascimento
-falta= 18-idade
+idade= 2025-ano_nascimento
+falta_anos= 18-idade
 passou= idade-18
-if idade<18:
-    print(f'Você tem {idade} anos, e ainda faltam {falta} anos para se alistar!')
-if idade==18:
-    print(f'Você tem {idade} anos, está na hora de se alistar!')    
-if idade>18:
-    print(f'Você tem {idade} anos, já passou {passou} anos para se alistar!')
-print(f'Tenha uma boa noite, {nome}!')
-
+if idade <18:
+    print(f'Você tem {idade} anos\n ainda falta {falta_anos} anos para o alistamento militar!')
+elif idade==18:
+    print(f'Você tem {idade} anos \n está na hora de se alistar ao serviço militar!')
+else:
+    print(f'Você tem {idade} anos \n já passou {passou} anos do tempo de alistamento militar!')
+print(f'Tenha um bom dia {nome}!')
 
 
 '''

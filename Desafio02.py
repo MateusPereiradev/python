@@ -1,18 +1,16 @@
-num= int(input('Digite aqui um número inteiro:'))
-nome= str(input('Digite aqui seu nome:')).strip()
-print('''Qual será a base de conversão?
+num= int(input('Digite aqui um número inteiro qualquer:'))
+print('''Escolha a base de conversão:
       [1] para binário
       [2] para octal
       [3] para hexadecimal''')
-conversao= int(input('Digite aqui a opção que você deseja:'))
-if conversao==1:
-    print(f'A conversão do número {num} para binário é {bin(num)[2:]}')
-if conversao==2:
-    print(f'A conversão do número {num} para octal é {oct(num)[2:]}')
-if conversao==3:
-    print(f'A conversão do número {num} para hexadecimal é {hex(num)[2:]}')
-print(f'Tenha uma boa noite {nome}')
-
+escolha_base= int(input('Escolha aqui a base de conversão de 1 a 3:'))
+if escolha_base==1:
+    print(f'Referente ao número {num}, em binário será {bin(num)[2:]}')
+elif escolha_base==2:
+    print(f'Referente ao número {num}, em octal será {oct(num)[2:]}')
+elif escolha_base==3:
+    print(f'Referente ao número {num}, em hexadecimal será {hex(num)[2:]}')
+print('Fim do programa')
 
 '''
 Escreva um programa que leia um número inteiro qualquer e peça para o usuário escolher

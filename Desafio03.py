@@ -1,12 +1,11 @@
-n1= int(input('Digite aqui um número inteiro:'))
-n2= int(input('Digite aqui outro número inteiro:'))
-if n1>n2:
-    print(f'O número {n1} é maior! ')
-elif n1<n2:
-    print(f'O número {n2} é maior!')
+num1= int(input('Digite aqui o primeiro número inteiro:'))
+num2= int(input('Digite aqui o segundo número inteiro:'))
+if num1>num2:
+    print(f'O primeiro valor {num1} é maior')
+elif num2>num1:
+    print(f'O segundo valor {num2} é maior')
 else:
-    print(f'Os números {n1} e {n2} são iguais')
-print('Tenha uma boa noite!')
+    print(f'Referente aos dois valor {num1} e {num2}, não existe valor maior, ambos são iguais')
 
 
 '''

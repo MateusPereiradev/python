@@ -1,3 +1,4 @@
+from time import sleep
 print('===== LOJAS PYTHON =====')
 valor_produto= float(input('Digite aqui o valor do produto: R$'))
 print('''Escolha o método de pagamento:
@@ -6,6 +7,8 @@ print('''Escolha o método de pagamento:
       [3] Em até 2x no cartão preço normal
       [4] 3x no cartão ou mais com 20% de juros ''')
 metodo_pagamento= int(input('Digite aqui a opção de pagamento desejada de 1 a 4:'))
+print('Calculando valores, aguarde...')
+sleep(3)
 if metodo_pagamento==1:
     valor_desconto= valor_produto-valor_produto*0.10
     print(f'Referente ao valor do produto R${valor_produto:.2f}, com 10% de desconto ficará R${valor_desconto:.2f}')
@@ -15,8 +18,10 @@ elif metodo_pagamento==2:
 elif metodo_pagamento==3:
     print(f'Referente ao valor do produto R${valor_produto:.2f}, em até 2x no cartão o preço será o normal.')
 else:
+    parcelas= int(input('Digite aqui em quantas vezes deseja parcelar (3x ou mais):'))
+    parcelas_valor= valor_produto/parcelas
     valor_juros= valor_produto+valor_produto*0.30
-    print(f'Referente ao valor do produto R${valor_produto:.2f}, em 3x ou mais no cartão terá 20% de juros, ficando R${valor_juros:.2f}')
+    print(f'Referente ao valor do produto R${valor_produto:.2f}, em {parcelas}x no cartão terá 20% de juros sendo R${parcelas_valor:.2f} cada parcela, sendo o valor total R${valor_juros:.2f}')
 print('Obrigado por comprar na nossa LOJA PYTHON! Volte Sempre!')    
 
 '''

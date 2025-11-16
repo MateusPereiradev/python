@@ -1,6 +1,8 @@
+from datetime import date
 ano_nascimento= int(input('Digite aqui o seu ano de nascimento:'))
+ano_atual= date.today().year
 nome= str(input('Digite aqui seu nome:')).strip()
-idade= 2025-ano_nascimento
+idade= ano_atual-ano_nascimento
 falta_anos= 18-idade
 passou= idade-18
 if idade <18:

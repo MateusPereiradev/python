@@ -1,28 +1,37 @@
 from time import sleep
-print('===== LOJAS PYTHON =====')
-valor_produto= float(input('Digite aqui o valor do produto: R$'))
-print('''Escolha o método de pagamento:
+print('=='*15)
+print('===== LOJAS PYTHON ======')
+print('=='*15)  
+valor_produto= float(input('Digite aqui o valor do produto:'))
+print('''Qual será a forma de pagamento:
       [1] À vista dinheiro/cheque com 10% de desconto
       [2] À vista no cartão com 5% de desconto
-      [3] Em até 2x no cartão preço normal
-      [4] 3x no cartão ou mais com 20% de juros ''')
-metodo_pagamento= int(input('Digite aqui a opção de pagamento desejada de 1 a 4:'))
-print('Calculando valores, aguarde...')
+      [3] Em até 2x no cartão será o preço normal
+      [4] 3x ou mais no cartão 20% de juros''')
+escolher_metodo= int(input('Digite aqui de 1 a 4 o metodo de pagamento:'))
+print('Calculando preços...')
 sleep(3)
-if metodo_pagamento==1:
-    valor_desconto= valor_produto-valor_produto*0.10
-    print(f'Referente ao valor do produto R${valor_produto:.2f}, com 10% de desconto ficará R${valor_desconto:.2f}')
-elif metodo_pagamento==2:
-    valor_desconto=valor_produto-valor_produto*0.05
-    print(f'Referente ao valor do produto R${valor_produto:.2f}, com 5% de desconto ficará R${valor_desconto:.2f}')
-elif metodo_pagamento==3:
-    print(f'Referente ao valor do produto R${valor_produto:.2f}, em até 2x no cartão o preço será o normal.')
+print('Só mais um instante...')
+sleep(2)
+if escolher_metodo==1:
+    desconto= valor_produto*0.10
+    print(f'Referente ao valor do produto de R${valor_produto:.2f}, com o desconto de 10% o valor será R${valor_produto-desconto:.2f}')
+elif escolher_metodo==2:
+    desconto= valor_produto*0.05
+    print(f'Referente ao valor do produto R${valor_produto:.2f}, com o desconto de 5% o valor será R${valor_produto-desconto}')
+elif escolher_metodo==3:
+    print(f'O valor do produto será normal, sendo assim você pagará R${valor_produto:.2f}')
+elif escolher_metodo==4:
+    parcelas= int(input('Digite aqui em quantas vezes você quer dividir:'))
+    juros= valor_produto+valor_produto*0.20
+    dividido= juros/parcelas
+    print(f'Referente ao valor do produto R${valor_produto:.2f}, em {parcelas}x, o valor do produto será R${juros:.2f} e o valor das parcelas serão R${dividido:.2f}')
 else:
-    parcelas= int(input('Digite aqui em quantas vezes deseja parcelar (3x ou mais):'))
-    parcelas_valor= valor_produto/parcelas
-    valor_juros= valor_produto+valor_produto*0.30
-    print(f'Referente ao valor do produto R${valor_produto:.2f}, em {parcelas}x no cartão terá 20% de juros sendo R${parcelas_valor:.2f} cada parcela, sendo o valor total R${valor_juros:.2f}')
-print('Obrigado por comprar na nossa LOJA PYTHON! Volte Sempre!')    
+    print('Opção invalida, tente novamente!!')
+print('Obrigado por comprar em nossas lojas!')
+
+
+
 
 '''
 Elabore um programa que calcule o valor a ser pago por um produto, considerando o seu preço normal e condição de pagamento:

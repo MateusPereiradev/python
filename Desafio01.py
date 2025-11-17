@@ -1,14 +1,23 @@
-casa_valor= float(input('Digite aqui o valor da casa que deseja comprar: R$'))
-salario_comprador= float(input('Digite aqui o seu salário: R$'))
-anos_pagamento= int(input('Digite aqui em quantos anos você pretende pagar:'))
-mensal=anos_pagamento*12
-prestacao_mensal=casa_valor/mensal
-salario_30= salario_comprador*0.30
-if prestacao_mensal <= salario_30:
-    print(f'Referente ao valor da casa R${casa_valor:.2f}, seu empréstimo foi aprovado!\n o valor da prestação mensal será R${prestacao_mensal:.2f}')
+from time import sleep
+print('=='*25)
+print('===== Simulador de Empréstimo Bancário =====')
+print('=='*25)
+nome= str(input('Digite aqui o seu nome:')).strip().capitalize()
+valor_casa= float(input('Digite o valor da casa: R$'))
+salario= float(input('Digite o seu salário: R$'))
+anos= int(input('Em quantos anos você pretende pagar a casa?'))
+prestacao= valor_casa/(anos*12)
+porcentagem_salario= salario*0.30
+print('Analisando as informações...')
+sleep(3)
+if prestacao <= porcentagem_salario:
+    print(f'Empréstimo APROVADO! Referente ao valor da casa R${valor_casa:.2f}, com o salário de R${salario:.2f}, as prestações mensais serão de R${prestacao:.2f}.')
 else:
-    print(f'Referente ao valor da casa R${casa_valor:.2f}, seu empréstimo foi negado!')
-print('Fim do programa')
+    print(f'Empréstimo NEGADO! Referente ao valor da casa R${valor_casa:.2f}, com o salário de R${salario:.2f}, as prestações mensais serão de R${prestacao:.2f}')
+print(f'Tenha um bom dia {nome}!!')
+
+
+
 '''
 Escreva um programa para aprovar o empréstimo bancário para a compra de uma casa.
 O programa vai perguntar o valor da casa, o salário do comprador e em quantos anos ele vai pagar.

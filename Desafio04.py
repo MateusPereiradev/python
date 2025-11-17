@@ -1,17 +1,19 @@
 from datetime import date
-ano_nascimento= int(input('Digite aqui o seu ano de nascimento:'))
+from time import sleep
 ano_atual= date.today().year
-nome= str(input('Digite aqui seu nome:')).strip()
-idade= ano_atual-ano_nascimento
-falta_anos= 18-idade
+nascimento= int(input('Digite aqui o ano do seu nascimento:'))
+idade= ano_atual-nascimento
 passou= idade-18
-if idade <18:
-    print(f'Você tem {idade} anos\n ainda falta {falta_anos} anos para o alistamento militar!')
-elif idade==18:
-    print(f'Você tem {idade} anos \n está na hora de se alistar ao serviço militar!')
-else:
-    print(f'Você tem {idade} anos \n já passou {passou} anos do tempo de alistamento militar!')
-print(f'Tenha um bom dia {nome}!')
+falta= 18-idade
+print('Calculando sua idade, para ver quais passos você deve tomar...')
+sleep(3)
+if idade<18:
+    print(f'Sua idade é {idade} anos, faltam {falta} anos para você se alistar!')
+if idade==18:
+    print(f'Sua idade é {idade} anos, está na hora de você se alistar!!')
+elif idade>18:
+    print(f'Sua idade é {idade} anos, já passou {passou} anos para você se alistar, vá até a base mais próxima para regularizar sua situação!! ')
+print('Tenha um bom dia!')
 
 
 '''

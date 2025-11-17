@@ -1,24 +1,22 @@
 from random import choice
 from time import sleep
-nome= str(input('Digite aqui seu nome:')).strip().capitalize()
-print('====== JOKENPô ======')
-print('''Escolha aqui sua jogada:
-      Pedra
-      Papel
-      Tesoura''')
-jogador= str(input('Escolha entre Pedra, Papel ou Tesoura:')).strip().capitalize()
-itens= ['Pedra', 'Papel', 'Tesoura']
+print('===== JOKENPÔ =====')
+print('Escolha sua jogada:' \
+'Pedra' \
+'Papél' \
+'Tesoura')
+jogador= str(input('Qual é a sua jogada?')).strip().capitalize()
+itens= ['Pedra','Papel', 'Tesoura' ]
 computador= choice(itens)
-print('Calculando jogada do computador e do jogador...')
+print('Calculando jogada...')
 sleep(3)
-if jogador==computador:
-    print(f'Referente a sua jogada {jogador} e a do computador {computador} deu EMPATE!')
-elif jogador=='Pedra' and computador=='Tesoura' or jogador=='Papel' and computador=='Pedra' or jogador=='Tesoura' and computador=='Papel':
-    print(f'Referete a jogada do jogador {jogador} e a do computador {computador} o jogador VENCEU!')
-elif computador=='Pedra' and jogador=='Tesoura'or computador=='Papel' and jogador=='Pedra' or computador=='Tesoura' and jogador=='Papel':
-    print(f'Referente a jogada do jogador {jogador} e a do computador {computador} o computador VENCEU!')
-print(f'Muito obrigado por jogar JOKENPÔ! Volte Sempre {nome}!')
-
+if computador==jogador:
+    print(f'A escolha do jogador foi {jogador} e a escolha do computador foi {computador}, sendo assim houve um EMPATE!')
+elif computador=='Pedra' and jogador== 'Tesoura' or computador== 'Papel' and jogador== 'Pedra' or computador=='Tesoura' and jogador=='Papel':
+    print(f'Referente a jogada do computador {computador} e a do jogador {jogador}, o computador VENCEU!')
+else:
+    print(f'Referente a jogada do computador {computador}, e a jogada do jogador {jogador}, o jogador VENCEU!')
+print('Obrigado por jogar nosso jogo JOKENPÔ!')
 
 '''
 Crie um programa que faça o computador jogar jokenpô com você.

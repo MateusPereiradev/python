@@ -6,6 +6,8 @@ print('''Escolha a forma de pagamento:
       [3] em até 2x preço normal do produto
       [4] 3x ou mais no cartão com 20% de juros''')
 escolha= int(input('Escolha o metodo de pagamento:'))
+print('Calculando valores...')
+sleep(3)
 if escolha==1:
     desconto= produto-produto*0.10
     print(f'Referente ao valor do produto de R${produto:.2f}, o valor com desconto de 10% será R${desconto:.2f}')

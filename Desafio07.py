@@ -14,7 +14,7 @@ elif 30<= imc <40:
     print(f'Seu IMC é {imc}, você está com OBESIDADE!')
 elif imc>40:
     print(f'Seu IMC é {imc}, você está com OBESIDADE MÓRBIDA!')
-    print('Tenha uma boa noite!')
+print('Tenha uma boa noite!')
 
 
 

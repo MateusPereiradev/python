@@ -1,24 +1,21 @@
 from random import choice
 from time import sleep
-print('===== JOKENPÔ =====')
-print('''Escolha sua jogada:
-      Pedra
-      Papel
-      Tesoura''')
-jogador= str(input('Qual é a sua jogada?')).strip().capitalize()
-itens= ['Pedra','Papel', 'Tesoura' ]
-computador= choice(itens)
-print('Calculando jogada...')
-sleep(3)
-if computador==jogador:
-    print(f'A escolha do jogador foi {jogador} e a escolha do computador foi {computador}, sendo assim houve um EMPATE!')
-elif computador=='Pedra' and jogador== 'Tesoura' or computador== 'Papel' and jogador== 'Pedra' or computador=='Tesoura' and jogador=='Papel':
-    print(f'Referente a jogada do computador {computador} e a do jogador {jogador}, o computador VENCEU!')
-elif jogador== 'Pedra' and computador=='Tesoura' or jogador=='Papel' and computador=='Pedra' or jogador== 'Tesoura' and computador=='Papel':
-    print(f'Referente a jogada do computador {computador}, e a jogada do jogador {jogador}, o jogador VENCEU!')
-else:
-    print('Jogada inválida! Tente novamente.')
-print('Obrigado por jogar nosso jogo JOKENPÔ!')
+print('===== Jokenpô=====')
+print('''Escolha aqui sua jogada:
+      [1] Pedra
+      [2] Papel
+      [3] Tesoura''')
+escolha_jogador= str(input('Digite aqui sua escolha: Pedra, Papel ou Tesoura:')).strip().capitalize()
+computador= ['Pedra', 'Papel', 'Tesoura']
+escolha_computador= choice(computador)
+if escolha_jogador==escolha_computador:
+    print(f'A escolha do jogador foi {escolha_jogador} e a escolha do computador foi {escolha_computador}, sendo assim houve um EMPATE.')
+elif escolha_jogador=='Pedra' and escolha_computador=='Tesoura' or escolha_jogador=='Papel' and escolha_computador=='Pedra' or escolha_jogador=='Tesoura' and escolha_computador=='Papel':
+    print(f'A escolha do jogador foi {escolha_jogador} e a escolha do computador foi {escolha_computador}, sendo assim o JOGADOR GANHOU!!')
+elif escolha_computador=='Pedra' and escolha_jogador=='Tesoura' or escolha_computador=='Papel' and escolha_jogador=='Pedra' or escolha_computador=='Tesoura' and escolha_computador=='Papel':
+    print(f'A escolha do jogador foi {escolha_jogador} e a escolha do computador foi {escolha_computador}, sendo assim o COMPUTADOR GANHOU!')
+print('Obrigado por jogar nosso jogo!')
+
 
 '''
 Crie um programa que faça o computador jogar jokenpô com você.

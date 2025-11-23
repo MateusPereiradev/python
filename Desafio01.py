@@ -1,13 +1,12 @@
-valor_casa= float(input('Digite aqui o valor da casa que desaja comprar: R$'))
-salario_comprador= float(input('Digite aqui o seu salário: R$'))
-anos_pagamento= int(input('Em quantos anos você deseja pagar a casa?'))
-prestacao_mensal= valor_casa/(anos_pagamento*12)
-if prestacao_mensal<=(salario_comprador*0.30):
-    print(f'''Seu empréstimo foi aprovado, parabéns!
-    O valor da prestação mensal será de R${prestacao_mensal:.2f}''')
+valor_casa= float(input('Digite aqui o valor da casa que deseja comprar:R$'))
+valor_salario= float(input('Digite aqui o valor de seu salário:R$'))
+anos_pagamento= int(input('Digite aqui em quantos anos deseja pagar:'))
+prestacao= valor_casa/(anos_pagamento*12)
+if prestacao<=valor_salario*0.30:
+    print(f'Seu empréstimo foi APROVADO, os valores das prestações serão R${prestacao:.2f}')
 else:
-    print('Seu empréstimo foi negado, tente novamente mais tarde.')
-print('Obrigado por utilizar nosso sistema de empréstimos bancários!')
+    print(f'Seu empréstimo foi NEGADO, os valor das prestações ultrapassam 30% de seu salário R${prestacao:.2f}')
+print('Obrigado por fazer sua simulação em nosso banco!')
 
 '''
 Escreva um programa para aprovar o empréstimo bancário para a compra de uma casa.

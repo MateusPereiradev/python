@@ -6,7 +6,7 @@ if prestacao<=valor_salario*0.30:
     print(f'Seu empréstimo foi APROVADO, os valores das prestações serão R${prestacao:.2f}')
 else:
     print(f'Seu empréstimo foi NEGADO, os valor das prestações ultrapassam 30% de seu salário R${prestacao:.2f}')
-print('Obrigado por fazer sua simulação em nosso banco!')
+print('Obrigado por fazer sua simulação em nosso banco!!')
 
 '''
 Escreva um programa para aprovar o empréstimo bancário para a compra de uma casa.

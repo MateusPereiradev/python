@@ -1,13 +1,14 @@
-nota_1= float(input("Digite aqui a sua primeira nota:"))
-nota_2= float(input("Digite aqui a sua segunda nota:"))
-media= (nota_1+nota_2)/2
-if media<5.0:
-    print(f"Sua média foi {media}, você foi REPROVADO!")
-elif 5.0<= media <=6.9:
-    print(f"Sua média foi {media}, você está de RECUPERAÇÃO!")
-elif media>=7.0:
-    print(f"Sua média foi {media}, você está APROVADO!")
-print("Tenha uma ótima noite!")
+nota_1= float(input('Digite aqui a sua primeira nota:'))
+nota_2= float(input('Digite aqui a sua segunda nota:'))
+media = (nota_1+nota_2)/2
+if media<5:
+    print(f'Referente a primeira nota {nota_1} e a segunda {nota_2}, a media é {media} e você está REPROVADO!')
+elif 5.0<= media <6.9:
+    print(f'Referente a primeira nota {nota_1} e a segunda {nota_2}, a media é {media} e você está de RECUPERAÇÃO!')
+else:
+    print(f'Referente a primeira nota {nota_1} e a segunda {nota_2}, a media é {media} e você foi APROVADO!')
+print('Obrigado por usar no programa de média de nota de alunos!')
+
 
 '''
 Crie um programa que leia duas notas e calcule sua média, mostrando uma mensagem no final, de acordo com a média

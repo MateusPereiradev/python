@@ -1,6 +1,9 @@
+from time import sleep
 nota_1= float(input('Digite aqui a sua primeira nota:'))
 nota_2= float(input('Digite aqui a sua segunda nota:'))
 media = (nota_1+nota_2)/2
+print('Calculando a média...')
+sleep(3)
 if media<5:
     print(f'Referente a primeira nota {nota_1} e a segunda {nota_2}, a media é {media} e você está REPROVADO!')
 elif 5.0<= media <6.9:

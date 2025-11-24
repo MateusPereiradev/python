@@ -1,9 +1,12 @@
 from datetime import date
+from time import sleep
 nascimento= int(input('Digite aqui o ano de seu nascimento:'))
 ano_atual= date.today().year
 idade=ano_atual-nascimento
 falta_alistar=18-idade
 passou_alistar= idade-18
+print('Calculando idade...')
+sleep(3)
 if idade<18:
     print(f'Você tem {idade} anos, ainda faltam {falta_alistar} anos para se alistar!')
 elif idade>18:

@@ -14,6 +14,7 @@ if r1+r2>r3 and r2+r3>r1 and r1+r3>r2:
     else:
         print(f'Referente as medidas informadas, as retas {r1}, {r2} e {r3} formam um triângulo ISÓSCELES!')
 print('Fim do código')
+
 '''
 Refaça o Desafio 035 dos triângulos , acrescentando o recurso de mostrar que tipo de triângulo será formado:
 Equilátero:todos os lados são iguais

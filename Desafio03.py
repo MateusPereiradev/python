@@ -1,13 +1,12 @@
-num_1= int(input('Digite o primeiro número inteiro:'))
-num_2= int(input('Digite o segundo número inteiro:'))
+num_1= int(input('Digite aqui um número inteiro:'))
+num_2= int(input('Digite aqui outro número inteiro:'))
 if num_1>num_2:
-    print('O primeiro valor é maior!')
+    print(f'O número {num_1} é maior que o número {num_2}!')
 elif num_2>num_1:
-    print('O segundo valor é maior!')
+    print(f'O número {num_2} é maior que o número {num_1}!')
 else:
-    print(f'O número {num_1} é igual ao número {num_2}! ')
+    print(f'O número {num_1} é igual ao número {num_2}!')
 print('Fim do programa')
-
 
 '''
 Escreva um programa que leia dois números inteiros e compare-os mostrando na tela uma mensagem:

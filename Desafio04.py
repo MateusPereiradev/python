@@ -1,19 +1,16 @@
 from datetime import date
-from time import sleep
 nascimento= int(input('Digite aqui o ano de seu nascimento:'))
-ano_atual= date.today().year
-idade=ano_atual-nascimento
-falta_alistar=18-idade
-passou_alistar= idade-18
-print('Calculando idade...')
-sleep(3)
+idade= date.today().year-nascimento
+falta= 18-idade
+passou= idade-18
 if idade<18:
-    print(f'Você tem {idade} anos, ainda faltam {falta_alistar} anos para se alistar!')
-elif idade>18:
-    print(f'Você tem {idade} anos, já passou {passou_alistar} anos para se alistar!')
+    print(f'Referente a sua idade de {idade} anos, ainda faltam {falta} anos para se alistar!')
+elif idade >18:
+    print(f'Referente a sua idade de {idade} anos, já passou {passou} anos para fazer o seu alistamento!')
 else:
-    print(f'Você tem {idade} anos, está na hora de se alistar')
-print('Obrigado por usar nosso programa de conversão!')
+    print(f'Referente a sua idade de {idade} anos, está na hora de você se alistar!')
+print('Fim do programa')
+
 '''
 Faça um programa que leia o ano de nascimento de um jovem e informe, de acordo com a idade:
 Se ele ainda vai se alistar ao serviço militar.

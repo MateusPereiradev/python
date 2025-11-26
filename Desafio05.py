@@ -10,7 +10,7 @@ elif 5.0<= media <6.9:
     print(f'Referente a sua primeira nota {nota_1} e a sua segunda nota {nota_2} sua média é {media}, você está de RECUPERAÇÃO!')
 elif media >= 7.0:
     print(f'Referente a sua primeira nota {nota_1} e a sua segunda nota {nota_2} sua média é {media}, você foi APROVADO ')
-print('Fim do programa')
+print('Fim do programa!')
 
 
 '''

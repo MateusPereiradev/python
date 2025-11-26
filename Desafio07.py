@@ -1,20 +1,17 @@
-from time import sleep
-peso= float(input('Digite aqui seu peso:'))
-altura= float(input('Digite aqui sua altura:'))
+peso= float(input('Digite aqui o seu peso:'))
+altura= float(input('Digite aqui a sua altura:'))
 imc= peso/altura**2
-print('Calculando IMC...')
-sleep(3)
-if imc<18.5:
-    print(f"Seu IMC é {imc}, você está ABAIXO do peso!")
-elif 18.5<= imc < 25:
-    print(f'Seu IMC é {imc}, você está com o peso IDEAL!')
-elif 25<= imc <30:
-    print(f'Seu IMC é {imc}, você está com SOBREPESO!')
-elif 30<= imc <40:
-    print(f'Seu IMC é {imc}, você está com OBESIDADE!')
-elif imc>40:
-    print(f'Seu IMC é {imc}, você está com OBESIDADE MÓRBIDA!')
-print('Tenha uma boa noite!')
+if imc < 18.5:
+    print(f'Referente ao seu IMC de {imc:.2f}, você está ABAIXO DO PESO!')
+elif 18.5 <= imc < 25:
+    print(f'Referente ao seu IMC de {imc:.2f}, você com o PESO IDEAL!')
+elif 25 <= imc < 30:
+    print(f'Referente ao seu IMC de {imc:.2f}, você está com SOBREPESO!')
+elif 30 <= imc < 40:
+    print(f'Referente ao seu IMC de {imc:.2f}, você está com OBESIDADE!')
+elif peso >=40:
+    print(f'Referente ao seu IMC {imc:.2f}, você está com OBESIDADE MÓRBIDA!')
+print('Obrigado por usar nosso conversor de IMC!')
 
 
 

@@ -1,29 +1,25 @@
-from time import sleep
 produto= float(input('Digite aqui o valor do produto:'))
-print('''Escolha a forma de pagamento:
-      [1] à vista dinheiro/cheque 10% de desconto
-      [2] à vista no cartão com 5% de desconto
-      [3] em até 2x preço normal do produto
-      [4] 3x ou mais no cartão com 20% de juros''')
-escolha= int(input('Escolha o metodo de pagamento:'))
-print('Calculando valores...')
-sleep(3)
-if escolha==1:
+print('''Escolha de pagamento:
+      [1] À vista no dinheiro/cheque com 10% de desconto
+      [2] À vista no cartão com 5% de desconto
+      [3] Em até 2x no cartão preço normal do produto
+      [4] Em 3x ou mais no cartão acrescimo de 20% do valor do produto''')
+forma_pagamento= int(input('Selecione aqui a forma de pagamento:'))
+if forma_pagamento==1:
     desconto= produto-produto*0.10
-    print(f'Referente ao valor do produto de R${produto:.2f}, o valor com desconto de 10% será R${desconto:.2f}')
-elif escolha==2:
+    print(f'Referente ao valor do produto de R${produto:.2f}, o mesmo com 10% de desconto será R${desconto:.2f}!')
+elif forma_pagamento==2:
     desconto= produto-produto*0.05
-    print(f'Referente ao valor do produto R${produto:.2f}, o valor com 5% de desconto será R${desconto:.2f}')
-elif escolha==3:
-    print(f'O valor será R${produto:.2f}')
-elif escolha==4:
-    parcela= int(input('Escolha a quantidade de parcelas até 12x:'))
-    valor_parcela= (produto+produto*0.30)/parcela
-    valor_produto= produto+produto*0.20
-    print(f'''Referente ao valor do produto R${produto:.2f}, o mesmo em 
-          {parcela}x será R${valor_produto} e os valor das parcelas serão de R${valor_parcela:.2f}''')
-print('Tenha um bom dia, e obrigado por comprar em nossas lojas!!')
+    print(f'Referente ao valor do produto R${produto:.2f}, o valor com 5% de desconto será R${desconto:.2f}!')
+elif forma_pagamento==3:
+    print(f'Referente ao valor do produto R${produto:.2f}, o mesmo nessa forma de pagamente permanece o mesmo valor!')
+elif forma_pagamento==4:
+    numero_parcelas= int(input('Digite aqui em quantas x deseja dividir, aceitamos até 12x com juros:'))
+    prazo=produto+produto*0.20
+    valor_parcelas= prazo/numero_parcelas
+    print(f'Referente ao valor do produto R${produto:.2f}, o mesmo a prazo ficará no valor de R${prazo:.2f}, divido em {numero_parcelas}x o valor das parcelas serão de R${valor_parcelas:.2f}! ')
 
+print('Obrigado por comprar em nossas lojas, volte sempre!')
 '''
 Elabore um programa que calcule o valor a ser pago por um produto, considerando o seu preço normal e condição de pagamento:
 à vista dinheiro/cheque:10% de desconto

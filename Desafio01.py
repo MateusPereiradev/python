@@ -1,13 +1,12 @@
-valor_casa= float(input('Digite aqui o valor da casa que deseja comprar:'))
-salario= float(input('Digite aqui o seu salário:'))
+valor_casa= float(input('Digite aqui o valor da casa que deseja:'))
+salário= float(input('Digite aqui o valor do seu salário:'))
 anos_pagamento= int(input('Digite aqui em quantos anos deseja pagar:'))
-prestacao_mensal= valor_casa/(anos_pagamento*12)
-if prestacao_mensal<=salario*0.30:
-    print(f'Referente ao valor da casa de R${valor_casa:.2f} e o valor da prestação R${prestacao_mensal:.2f} seu empréstimo foi aceito!')
+prestação= valor_casa/(anos_pagamento*12)
+if prestação<=salário*0.30:
+    print(f'O valor da casa escolhida é R${valor_casa:.2f}, o valor das prestações divididas em {anos_pagamento} anos será R${prestação:.2f}, sendo assim seu empréstimo foi APROVADO!')
 else:
-    print(f'Referente ao valor da casa de R${valor_casa:.2f} e o valor da prestaçao R${prestacao_mensal:.2f} seu empréstimo foi negado!')
-print('Obrigado por usar nossa calculadora de empréstimo!')
-
+    print(f'Referete ao valor da casa R${valor_casa:.2f}, o valor das prestações divididas em {anos_pagamento} anos será R${prestação:.2f}, sendo assim seu empréstimo foi NEGADO!')
+print('Obrigado por usar nossos meios de crédito!')
 
 
 '''

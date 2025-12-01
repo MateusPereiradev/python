@@ -1,12 +1,12 @@
-num_1= int(input('Digite o primeiro número inteiro:'))
-num_2= int(input('Digite o segundo número inteiro:'))
-if num_1>num_2:
-    print('O primeiro valor é maior!')
-elif num_2>num_1:
-    print('O segundo valor é maior!')
+numero_1= int(input('Digite aqui um número inteiro:'))
+numero_2= int(input('Digite aqui outro número inteiro:'))
+if numero_1 > numero_2:
+    print(f'O número {numero_1} é maior que o número {numero_2}!')
+elif numero_2 > numero_1:
+    print(f'O número {numero_2} é maior que o número {numero_1}')
 else:
-    print(f'O número {num_1} é igual ao número {num_2}! ')
-print('Fim do programa')
+    print(f'O número {numero_1} e o número {numero_2} são iguais!')
+print('Fim do programa de números inteiros!')
 
 
 '''

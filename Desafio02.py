@@ -1,16 +1,19 @@
-num= int(input('Digite aqui um número inteiro qualquer:'))
-print('''Escolha sua base de conversão:
+num= int(input('Digite aqui um número inteiro:'))
+print('''Escolha aqui sua base de conversão:
       [1] Binário
       [2] Octal
       [3] Hexadecimal''')
-escolha_usuário= int(input('Digite aqui sua escolha para conversão:'))
+escolha_usuário= int(input('Informe aqui sua escolha:'))
 if escolha_usuário==1:
-    print(f'Referente ao número {num}, a base convertida para binário é {bin(num)[2:]}')
+    print(f'Referente ao número {num} o mesmo convertido para binário é {bin(num)[2:]}')
 elif escolha_usuário==2:
-    print(f'Referente ao número {num}, a base convertida para octal é {oct(num)[2:]}')
+    print(f'Referente ao número {num} o mesmo convertido para octal é {oct(num)[2:]}')
 elif escolha_usuário==3:
-    print(f'Referente ao número {num}, sua base convertida para hexadecimal é {hex(num)[2:]}')
-print('Obrigado por usar nosso programa de base de conversões!')
+    print(f'Referente ao número {num} o mesmo convertido para hexadecimal é {hex(num)[2:]}')
+else:
+    print('Escolha inválida!')
+print('Fim do programa de conversão de números!')
+
 
 
 '''

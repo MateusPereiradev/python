@@ -1,16 +1,16 @@
 from time import sleep
-nota_1= float(input('Digite aqui o valor da primeira nota:'))
-nota_2= float(input('Digite aqui o valor da segunda nota:'))
-media= (nota_1+nota_2)/2
-print('Calculando média...')
+nota_1= float(input('Digite aqui o valor de sua primeira nota:'))
+nota_2= float(input('Digite aqui o valor de sua segunda nota:'))
+média= (nota_1+nota_2)/2
+print('Calculando seu resultado...')
 sleep(3)
-if media < 5.0:
-    print(f'Referente a sua média de {media}, você foi \033[31mREPROVADO!')
-elif 5.0<= media < 6.9:
-    print(f'Referente a sua média de {media}, você está de \033[36mRECUPERAÇÃO!')
-elif media >=7.0:
-    print(f'Referente a sua média de {media}, você está \033[32mAPROVADO!')
-print('Fim do programa de média de notas do aluno!')
+if média < 5.0:
+    print(f'Referente sua média de {média}, você foi \033[31mREPROVADO!')
+elif 5.0<= média <6.9:
+    print(f'Referente sua média de {média}, você está de \033[34mRECUPERAÇÃO!')
+elif média >= 7.0:
+    print(f'Referente sua média de {média}, você foi \033[32mAPROVADO!')
+print('Fim do programa de média de nota!')
 
 
 '''

@@ -1,17 +1,17 @@
 peso= float(input('Digite aqui seu peso:'))
 altura= float(input('Digite aqui sua altura:'))
 imc= peso/altura**2
-if imc < 18.5:
-    print(f'Referente ao seu IMC de {imc:.2f} você está ABAIXO do peso!')
+if imc <18.5:
+    print(f'Referente ao seu IMC de {imc} você está \033[31mABAIXO DO PESO!')
 elif 18.5<= imc <25:
-    print(f'Referente ao seu IMC de {imc:.2f} você está com o peso IDEAL!')
+    print(f'Referente ao seu IMC de {imc} você está com o \033[32mPESO IDEAL!')
 elif 25<= imc <30:
-    print(f'Referente ao seu IMC de {imc:.2f} você está com SOBREPESO!')
+    print(f'Referente ao seu IMC de {imc} você está com \033[31mSOBREPESO!')
 elif 30<= imc <40:
-    print(f'Referente ao seu IMC {imc:.2f} você está com OBESIDADE!')
-else:
-    print(f'Referente ao seu IMC {imc:.2f} você está com OBESIDADE MÓRBIDA!')
-print('Fim do programa de IMC!')
+    print(f'Referente ao seu IMC de {imc} você está com \033[31mOBESIDADE!')
+elif imc >= 40:
+    print(f'Referente ao seu IMC de {imc} você está com OBESIDADE \033[31mMÓRBIDA!')
+print('Fim do programa de calcular IMC!')
 
 '''
 Desenvolva uma lógica que leia o peso e a altura de uma pessoa, calcule seu IMC e mostre seu status, de acordo com a

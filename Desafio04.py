@@ -1,16 +1,15 @@
 from datetime import date
-ano_nascimento= int(input('Digite aqui o seu ano de nascimento:'))
+ano_nascimento= int(input('Digite aqui seu ano de nascimento:'))
 idade= date.today().year-ano_nascimento
 falta= 18-idade
-passou= idade-18
+passou=idade-18
 if idade < 18:
-    print(f'Referente a sua idade de {idade} anos, ainda faltam {falta} anos para se alistar!')
-elif idade > 18:
-    print(f'Referente a sua idade de {idade} anos, já passou {passou} anos para se alistar!')
+    print(f'Referente sua idade de {idade} anos, ainda faltam {falta} anos para se alistar!')
+elif idade >18:
+    print(f'Referente sua idade de {idade} anos, já passou {passou} anos para se alistar!')
 elif idade==18:
     print(f'Referente sua idade de {idade} anos, está na hora de se alistar!')
-print('Fim do programa de alistamento!')
-
+print('Fim do programa de alistamamento!')
 
 '''
 Faça um programa que leia o ano de nascimento de um jovem e informe, de acordo com a idade:

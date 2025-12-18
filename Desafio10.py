@@ -4,24 +4,23 @@ print('''Escolha sua jogada:
       Pedra
       Papel
       Tesoura''')
-escolha_jogador= str(input('Digite aqui a sua escolha Pedra, Papel ou Tesoura:')).strip().capitalize()
-computador= ['Pedra', 'Papel', 'Tesoura']
-escolha_computador= choice(computador)
+jogador= str(input('Digite aqui sua jogada Pedra, Papel ou Tesoura:')).strip().capitalize()
+lista_opções= ['Pedra', 'Papel', 'Tesoura']
+computador= choice(lista_opções)
 print('JO')
 sleep(1)
 print('KEN')
 sleep(1)
-print('PÔ')
-sleep(1)
-if escolha_jogador==escolha_computador:
-    print(f'Referente a escolha do jogador {escolha_jogador} e a escolha do {escolha_computador} houve um \033[34mEMPATE!')
-elif escolha_jogador=='Pedra' and escolha_computador=='Tesoura' or escolha_jogador=='Papel' and escolha_computador=='Pedra' or escolha_jogador=='Tesoura' and escolha_computador=='Papel':
-    print(f'Referente a escolha do jogador {escolha_jogador} e a escolha do computador {escolha_computador} o \033[32mJOGADOR VENCEU!')
-elif escolha_computador=='Pedra' and escolha_jogador=='Tesoura' or escolha_computador=='Papel' and escolha_jogador=='Pedra' or escolha_computador=='Tesoura' and escolha_jogador=='Papel':
-    print(f'Referente a escolha do jogador {escolha_jogador} e a escolha do computador {escolha_computador} o \033[32mCOMPUTADOR VENCEU!')
+print('PÔ!!!')
+if jogador==computador:
+    print(f'Computador jogou {computador} e você jogou {jogador}, houve um EMPATE!')
+elif jogador=='Pedra' and computador=='Tesoura' or jogador=='Papel' and computador=='Pedra' or jogador=='Tesoura' and computador=='Papel':
+    print(f'Computador jogou {computador} e você jogou {jogador}, VOCÊ VENCEU!')
+elif computador=='Pedra' and jogador=='Tesoura' or computador=='Papel' and jogador=='Pedra' or computador=='Tesoura' and jogador=='Papel':
+    print(f'Computador jogou {computador} e você jogou {jogador}, COMPUTADOR VENCEU!')
 else:
-    print('Escolha inválida!')
-print('Fim do jogo Jokenpô!')
+    print('Jogoda inválida, tente novamente!')
+print('Fim do programa de Jokenpô!')
 
 '''
 Crie um programa que faça o computador jogar jokenpô com você.
